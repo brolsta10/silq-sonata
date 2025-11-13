@@ -1,0 +1,5 @@
+AI-Assisted Code Notice
+This project contains AI-assisted code and documentation created with GPT-5 and Groq models.
+All content was curated, arranged, and integrated by the human author.
+No model weights, training data, or executable binaries are included.
+You are free to modify, use, and distribute under MIT-style terms.

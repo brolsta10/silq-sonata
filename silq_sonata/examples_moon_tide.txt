@@ -1,0 +1,16 @@
+Libretto:
+"The moon pulls the tide not with force, but with phase.
+The ocean rises in superposition — high and low at once.
+When the sailor measures the crest, the wave decides."
+
+Target Output (Silq-like):
+silqdef tidalPhase(moon: qbit, ocean: qbit) -> qbit {
+    h(moon);                          // moon in superposition
+    rz(π/4, ocean) controlled moon;   // phase pull
+    return ocean;                     // tide rises... and falls
+}
+
+def crest(): bool {
+    wave := tidalPhase(fresh(), fresh());
+    return measure(wave);             // sailor looks → wave decides
+}
